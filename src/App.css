@@ -1,0 +1,36 @@
+:root{
+--dark-green: rgba(79,110,99,.9);
+--gray-green: rgba(212,220,212);
+--dark-gray-green: rgba(173,192,186);
+--gray-cyan: rgba(158,179,180);
+}
+
+body{
+  background-image: url('https://i.imgur.com/goGJ2E1.png');
+  /* background-color: yellow; */
+  /* background-image: url('https://i.imgur.com/yrJxm7O.jpeg'); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.App{
+  background-color: var(--dark-green);
+  height: 10vh;
+  font-size: 2rem;
+}
+a{
+  color: var(--gray-green);
+  text-decoration: none;
+}
+.title{
+  background-color: var(--dark-green);
+  width: 50vw;
+  height: 25vh;
+  border: 1rem solid var(--gray-green);
+  margin: 10rem auto;
+  text-align: center;
+}
+.softwareEngineer {
+  border-top: .5rem solid black;
+  padding: 0 2rem;
+}
