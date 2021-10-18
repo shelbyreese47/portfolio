@@ -1,10 +1,9 @@
-import React from 'react';
 import { Document } from 'react-pdf';
+import React from 'react';
 
-function Resume(props) {
+function resume(props) {
     return (
         <div>
-            <a href='/somefile.txt' download>Click to download</a>
             <Document
             file = ""
             onLoadSuccess = {this.onDocumentLoadSuccess}
@@ -15,4 +14,4 @@ function Resume(props) {
     );
 }
 
-export default Resume;
+export default resume;
