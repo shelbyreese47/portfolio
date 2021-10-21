@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home(props) {
     return (
-        <div>
+        <div className="firstBackground">
 					<div className='title'>
 						<h2 className = 'name'>Shelby Reese</h2>
 						<div className = "seContainer">
