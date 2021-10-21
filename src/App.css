@@ -6,31 +6,239 @@
 }
 
 body{
-  background-image: url('https://i.imgur.com/goGJ2E1.png');
-  /* background-color: yellow; */
-  /* background-image: url('https://i.imgur.com/yrJxm7O.jpeg'); */
+  /* background-image: url('https://i.imgur.com/3aWbTZl.png'); */
+  background-image: url('https://i.imgur.com/MRmqsh5.png');
+
 	background-repeat: no-repeat;
 	background-size: cover;
+
+  /* background-size: auto 100vh; */
+
+
 	background-attachment: fixed;
 }
-.App{
+.projectContainer{
+  display:flex;
+
+}
+.flexLeft{
+width:10vw;
+
+}
+.secondBackground{
+  /* background-color: var(--gray-green); */
+  opacity: .95;
+  height: auto;
+  width:90vw;
+  
+  border-left: 1.2rem solid var(--gray-cyan);
+}
+.individualProject{
+  display:flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+  /* height:30vh; */
+  /* flex-wrap: wrap; */
+  /* background-color: rgba(79,110,99,.8); */
+  background-color: rgba(212,220,212, .8);
+  padding: .5rem;
+  margin: .5rem;
+  
+  /* opacity: .3; */
+
+}
+.projectDetails{
+  width: 45vw;
+  padding: 1rem;
+  /* border: 2px solid purple; */
+}
+.projectImages{
+  width: 55vw;
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.mainImageDiv{
+  width: 55vw;
+  height: auto;
+  /* border: 4px solid yellow; */
+  overflow-y:auto;
+
+  text-align: center;
+}
+.mainImage{
+  width: 50vw;
+  margin: auto .3rem;
+}
+.secondPicture,.thirdPicture, .fourthPicture{
+  width: 10vw;
+  padding: .3rem;
+}
+.nav{
   background-color: var(--dark-green);
   height: 10vh;
   font-size: 2rem;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
 }
 a{
   color: var(--gray-green);
   text-decoration: none;
 }
+.navLink{
+  font-size: 1.5rem;
+  margin-top: 4vh;
+}
+/*
+.sidenav {
+  height: 100%; 
+  width: 0px; /* 
+  position: fixed;
+  z-index: 2; 
+  top: 0;
+  right: 0;
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.5s; 
+  background-color: #14a96d;
+  padding: 5% 0;
+
+} */
+/* #hamburger-menu {
+  padding: 0.5em;
+  border: 1px solid #cfd7de;
+  border-radius: 3px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; 
+  cursor: pointer;
+} */
+
+.logoImage{
+  height: 5rem;
+  margin-top: 0rem;
+  grid-column: 1;
+ 
+}
 .title{
-  background-color: var(--dark-green);
-  width: 50vw;
-  height: 25vh;
-  border: 1rem solid var(--gray-green);
-  margin: 10rem auto;
+  background-color: rgba(79,110,99, .97);
+  width: 40vw;
+  max-width: 600px;
+  height: auto;
+  border: 1rem solid var(--gray-cyan);
+  margin: 15rem auto 0 auto;
   text-align: center;
+  color: var(--gray-green);
+}
+.name {
+  font-size: 3rem;
+  margin-bottom: .5rem;
+
 }
 .softwareEngineer {
-  border-top: .5rem solid black;
+  font-size: 2rem;
   padding: 0 2rem;
+}
+.seContainer {
+  border-top: .25rem solid var(--gray-cyan);
+  margin: 0 2rem;
+}
+
+.contactForm{
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  border: 2px solid red;
+  margin: 3rem auto;
+  padding: 3rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+.row1col1{
+  grid-row: 1;
+  grid-column: 1;
+}
+.row1col2{
+  grid-row: 1;
+  grid-column: 2;
+}
+.row2col1{
+  grid-row: 2;
+  grid-column: 1;
+}
+.row2col2{
+  grid-row: 2;
+  grid-column: 2;
+}
+.row3col1{
+  grid-row: 3;
+  grid-column: 1;
+}
+.row3col2{
+  grid-row: 3;
+  grid-column: 2;
+  height: 10rem;
+}
+.row4col2{
+  grid-row: 4;
+  grid-column: 2;
+}
+
+.resumeContainer{
+  height: 40vh;
+  width: 80vw;
+  overflow-y:auto;
+  border: .5rem solid var(--dark-gray-green);
+}
+
+.resumeImg{
+  width:75vw;
+}
+.resumeGrid{
+  display:grid;
+  /* grid-template-columns: 30vw 30vw; */
+  /* grid-template-rows: 30vh 10vh; */
+  justify-content: center;
+  align-items: center;
+ align-content: center;
+ gap: 1rem;
+ padding-top: 2rem;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.download{
+  text-align: center;
+   border: 2px solid red;
+
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+
+
 }
