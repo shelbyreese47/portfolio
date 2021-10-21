@@ -1,6 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+// const next = document.querySelector('.next');
+// const prev = document.querySelector('.prev');
+
+
 
 function Projects(props) {
+    const [currentImg, setCurrentImg] = useState(0);
+    let currentImgIndex = 0;
+    // let previousImgIndex = 0;
+    const images = document.getElementsByClassName('images');
+    
+    const nextClick = ((event) => {
+        if (currentImg > 3) {
+            setCurrentImg(0);
+            console.log('I am ackno')
+        }
+        else setCurrentImg(currentImg + 1);
+    });
+  
+    
+    const prevClick =( () => {
+        // previousImgIndex = currentImgIndex;
+        currentImgIndex -= 1;
+        console.log(currentImgIndex)
+        if (currentImgIndex < 0) {
+            currentImgIndex = images.length - 1;
+        }
+    });
     return (
     <div className="projectContainer">
         <div className="flexLeft"></div>
@@ -19,13 +46,43 @@ function Projects(props) {
                     </ul>
                 </div>
             <div className = "projectImages">
-                <div className="mainImageDiv">
+                <div class="carousel-container">
+                    {/* <!-- previous button --> */}
+                    <div class="carousel-button prev" onClick={prevClick}>
+                    {/* <!-- from linearicons icon font --> */}
+                    <span class="lnr lnr-chevron-left"></span>
+                    </div>
+                {/* <div className="mainImageDiv">
                     <img className= "mainImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ1OQZ775PHbWnknSG0HQ9uiXxItIDn16hCA&usqp=CAU" alt="" />
+                </div> */}
+                {/* <div> */}
+                <div class="carousel-images">
+                    <img 
+                        style={ currentImgIndex === 0 ? { display: 'block' } : { display : 'none'}}
+                        className= "mainImage" 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ1OQZ775PHbWnknSG0HQ9uiXxItIDn16hCA&usqp=CAU" 
+                        alt="" />
+                    <img style={ currentImgIndex === 1 ? { display: 'block' } : { display : 'none'}}
+                        className="secondPicture" 
+                        src="https://bit.ly/3AY99if" 
+                        alt="" />
+                    <img 
+                        style={ currentImgIndex === 2 ? { display: 'block' } : { display : 'none'}}
+                        className="thirdPicture" 
+                        src="https://bit.ly/3aSDiEP" 
+                        alt="" />
+                    <img
+                        style={ currentImgIndex === 3 ? { display: 'block' } : { display : 'none'}} 
+                        className="fourthPicture" 
+                        src="https://bit.ly/3ARyj1S" 
+                        alt="" />
+                    {/* </div> */}
+                    {/* <!-- next button --> */}
+                    <div class="carousel-button next" onClick={nextClick}>
+                    {/* <!-- from linearicons icon font --> */}
+                    <span class="lnr lnr-chevron-right">+</span>
+                    </div>
                 </div>
-                <div>
-                    <img className="secondPicture" src="https://bit.ly/3AY99if" alt="" />
-                    <img className="thirdPicture" src="https://bit.ly/3aSDiEP" alt="" />
-                    <img className="fourthPicture" src="https://bit.ly/3ARyj1S" alt="" />
                 </div>
             </div>
             </div>
