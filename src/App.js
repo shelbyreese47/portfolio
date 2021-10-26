@@ -5,7 +5,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
-import Projects from './components/Projects'
+import Projects from './components/Projects/Projects'
 import Resume from './components/Resume'
 import Skills from './components/Skills'
 import ContactMe from './components/ContactInfo'
@@ -20,9 +20,7 @@ function App() {
 			<header >
 				<div className='nav'>
 
-				{/* <a href='#' class='closebtn'>
-					&times;
-				</a> */}
+				
 				<Link to='/home'>
 					<img
 						className='logoImage'
