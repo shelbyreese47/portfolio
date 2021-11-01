@@ -16,19 +16,69 @@ body {
 
 	background-attachment: fixed;
 }
+.about-skills-flex {
+	display: flex;
+	flex-direction: row;
+	border: 10px solid var(--dark-green);
+	opacity: 0.95;
+	height: 400px;
+	width: 90vw;
+	min-width: 500px;
+	max-width: 1000px;
+	margin: 1rem auto;
+	/* border-left: 1.2rem solid var(--gray-cyan); */
+	background-color: rgba(212, 220, 212, 0.8);
+	padding: 0 2rem;
+}
+.about-me-container {
+	width: 70vw;
+	/* border: 2px solid purple; */
+}
+.skills-container {
+	width: 20vw;
+	/* padding: 0 2rem; */
+	/* border: 2px solid green; */
+}
+
 .projectContainer {
 	display: flex;
-}
-.flexLeft {
-	width: 10vw;
+	position: relative;
+	/* border: 2px solid blue; */
+	height:83vh;
 }
 .secondBackground {
 	/* background-color: var(--gray-green); */
-	opacity: 0.95;
+	/* opacity: 0.95;
 	height: 90vh;
 	width: 100vw;
 	overflow-y: auto;
-	border-left: 1.2rem solid var(--gray-cyan);
+	border-left: 1.2rem solid var(--gray-cyan); */
+	/* border: 4px solid orange; */
+	display: flex;
+	/* position:relative; */
+	width: 100vw;
+	/* text-align: center; */
+}
+.projectsContainer {
+	display: flex;
+	flex-direction: row;
+}
+.projects-container {
+	border: 10px solid var(--dark-green);
+	opacity: 0.95;
+	height: 83vh;
+	width: 90vw;
+	min-width: 500px;
+	margin: 1rem auto;
+	/* border-left: 1.2rem solid var(--gray-cyan); */
+	background-color: rgba(212, 220, 212, 0.8);
+}
+.project-prev {
+}
+.project-next {
+}
+
+.projects-container {
 }
 
 .carousel-button {
@@ -56,56 +106,89 @@ body {
 	/* height:30vh; */
 	/* flex-wrap: wrap; */
 	/* background-color: rgba(79,110,99,.8); */
-	background-color: rgba(212, 220, 212, 0.8);
+	width: 80vw;
 	padding: 0.5rem;
 	margin: 0.5rem;
 
 	/* opacity: .3; */
 }
-.projectHeaders{
-  text-align: center;
-  padding: 1rem;
-  line-height: 125%;
+.projectHeaders {
+	text-align: center;
+	padding: 1rem;
+	line-height: 125%;
 }
 .projectDetails {
-	width: 80vw;
+	width: 85vw;
 	padding: 1rem;
-  /* display: flex; */
-	border: 2px solid purple;
-  	display: flex;
-	flex-direction: row;
-}
-.projectLink{
-  border: 2px solid red;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-}
-.projectLogo{
-  height: 3rem;
-  /* border: 2px solid purple; */
-}
-.projectAnchorTag{
-  color: black;
-  /* border: 2px solid green; */
-
-}
-.projectImages {
-	width: 55vw;
-	border: 2px solid blue;
+	min-height: 55vh;
+	/* display: flex; */
+	/* border: 2px solid green; */
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	position:absolute;
+	bottom: 0px;
+}
+.projectLink {
+	/* border: 2px solid red; */
+	height: 3.5rem;
+
+	display: flex;
+	align-items: center;
+
+}
+.pl1{
+	position: absolute;
+	left:0;
+	bottom:50px;
+
+}
+.pl2{
+	position: absolute;
+	left:0;
+	bottom:0;
+}
+.projectLink:first-of-type {
+	margin-top: 7rem;
+}
+.logoContainer {
+	min-width: 3rem;
+	/* border: 2px solid red; */
+	text-align: center;
+	margin-right: 1rem;
+}
+.projectLogo {
+	height: 3rem;
+	/* border: 2px solid purple; */
+}
+.projectAnchorTag {
+	color: black;
+	width:100px;
+	/* border: 2px solid green; */
+}
+.projectImages {
+	width: 80vw;
+	/* border: 2px solid blue; */
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 	align-content: center;
 	align-items: center;
 }
+.carousel-images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* border: 4px solid green; */
+	width: 60vw;
+	height: 50vh;
+	box-shadow: 8px 8px 8px var(--dark-green);
+}
 .mainImage {
-	width: 45vw;
-	height: auto;
-	/* border: 4px solid yellow; */
-	overflow-y: auto;
-	/* border: 5px solid red; */
-	text-align: center;
+	height: 100%;
+	width:100%;
+	/* min-width: 100%; */
+	flex-shrink: 0;
 }
 
 .nav {
@@ -113,7 +196,7 @@ body {
 	height: 10vh;
 	font-size: 2rem;
 	display: grid;
-	grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 4fr 1fr 1fr 1fr;
 }
 a {
 	color: var(--gray-green);
@@ -123,53 +206,13 @@ a {
 	font-size: 1.5rem;
 	margin-top: 4vh;
 }
-/*
-.sidenav {
-  height: 100%; 
-  width: 0px; /* 
-  position: fixed;
-  z-index: 2; 
-  top: 0;
-  right: 0;
-  overflow-x: hidden; 
-  padding-top: 60px;
-  transition: 0.5s; 
-  background-color: #14a96d;
-  padding: 5% 0;
-
-} */
-/* #hamburger-menu {
-  padding: 0.5em;
-  border: 1px solid #cfd7de;
-  border-radius: 3px;
-}
-
-.closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-.overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1; 
-  cursor: pointer;
-} */
 
 .logoImage {
 	height: 5rem;
 	margin-top: 0rem;
 	grid-column: 1;
 }
+
 .title {
 	background-color: rgba(79, 110, 99, 0.97);
 	width: 40vw;
@@ -192,18 +235,25 @@ a {
 	border-top: 0.25rem solid var(--gray-cyan);
 	margin: 0 2rem;
 }
-
+.contactMe{
+	background-color: rgba(212, 220, 212, 0.8);
+	width: 70vw;
+	max-width: 700px;
+	margin: 3rem auto;
+	padding: 3rem;
+}
 .contactForm {
 	width: 60vw;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-template-rows: auto;
 	gap: 1rem;
-	border: 2px solid red;
-	margin: 3rem auto;
-	padding: 3rem;
+	/* border: 2px solid red; */
+	/* margin: 3rem auto;
+	padding: 3rem; */
 	line-height: 2rem;
 	font-size: 1.5rem;
+
 }
 .row1col1 {
 	grid-row: 1;
@@ -237,13 +287,15 @@ a {
 
 .resumeContainer {
 	height: 40vh;
-	width: 80vw;
+	width: 75vw;
 	overflow-y: auto;
 	border: 0.5rem solid var(--dark-gray-green);
+	position: relative;
+	margin-bottom: 2rem;
 }
 
 .resumeImg {
-	width: 75vw;
+	width: 100%;
 }
 .resumeGrid {
 	display: grid;
@@ -258,9 +310,47 @@ a {
 ::-webkit-scrollbar {
 	width: 0px;
 }
+.hoverMessage{
+	/* display:none;
+	position: absolute;
+	top: 0;
+	right:0; */
+	display: none;
+	position: absolute;
+	top:15;
+	right:15;
+	width: 350px;
+	font-size:14px;
+	background-color: #fff;
+	border:2px solid rgb(128, 128, 0);
+	text-align: left;
+	line-height: 200%;
+	padding-left: 15px;
+}
 .download {
 	text-align: center;
+	/* border: 2px solid red; */
+	height: 2rem;
+}
+.downloadButton{
+	height:2rem;;
+	position: absolute;
+	top: 0;
+	right:0;
+	/* border: 1px solid red; */
+	border-radius: 15px;
+
+}
+.downloadButton:hover{
+	background-color: var(--gray-cyan);
+}
+.downloadButton:hover .hoverMessage{
+	display:block;
+
+}
+.button2{
 	border: 2px solid red;
+
 }
 
 @media screen and (min-width: 769px) {
