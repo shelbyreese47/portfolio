@@ -5,10 +5,11 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
-import Projects from './components/Projects'
+import Projects from './components/Projects/Projects'
 import Resume from './components/Resume'
 import Skills from './components/Skills'
 import ContactMe from './components/ContactInfo'
+import ProjectsParent from './components/Projects/ProjectsParent'
 
 import './App.css';
 
@@ -20,9 +21,7 @@ function App() {
 			<header >
 				<div className='nav'>
 
-				{/* <a href='#' class='closebtn'>
-					&times;
-				</a> */}
+				
 				<Link to='/home'>
 					<img
 						className='logoImage'
@@ -30,15 +29,15 @@ function App() {
 						alt='SR home'
 					/>
 				</Link>
-				<Link className='navLink' to='/aboutme'>
+				{/* <Link className='navLink' to='/aboutme'>
 					About Me
-				</Link>
+				</Link> */}
 				<Link className='navLink' to='/projects'>
 					Projects
 				</Link>
-				<Link className='navLink' to='/skills'>
+				{/* <Link className='navLink' to='/skills'>
 					Skills
-				</Link>
+				</Link> */}
 				<Link className='navLink' to='/resume'>
 					Resume
 				</Link>
@@ -58,7 +57,7 @@ function App() {
 				/>
 				<Route path='/home' component={Home} />
 				<Route path='/aboutme' component={AboutMe} />
-				<Route path='/projects' component={Projects} />
+				<Route path='/projects' component={ProjectsParent} />
 				<Route path='/skills' component={Skills} />
 				<Route path='/resume' component={Resume} />
 				<Route path='/contact' component={ContactMe} />
