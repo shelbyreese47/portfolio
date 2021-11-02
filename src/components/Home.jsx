@@ -6,7 +6,7 @@ function Home(props) {
 					<div className='title'>
 						<h2 className = 'name'>Shelby Reese</h2>
 						<div className = "seContainer">
-							<h3 className='softwareEngineer'>Software Engineer</h3>
+							<h3 className='softwareEngineer'>Full Stack Engineer</h3>
 						</div>
 					</div>
         </div>
