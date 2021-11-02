@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Zen+Maru+Gothic:wght@300;400&display=swap');
 :root {
 	--dark-green: rgba(79, 110, 99, 0.9);
 	--gray-green: rgba(212, 220, 212);
@@ -6,15 +7,12 @@
 }
 
 body {
-	/* background-image: url('https://i.imgur.com/3aWbTZl.png'); */
 	background-image: url('https://i.imgur.com/MRmqsh5.png');
-
 	background-repeat: no-repeat;
 	background-size: cover;
-
-	/* background-size: auto 100vh; */
-
 	background-attachment: fixed;
+	font-family: 'Zen Maru Gothic', sans-serif;
+	font-weight: 400;;
 }
 .about-skills-flex {
 	display: flex;
@@ -26,7 +24,6 @@ body {
 	min-width: 500px;
 	max-width: 1000px;
 	margin: 1rem auto;
-	/* border-left: 1.2rem solid var(--gray-cyan); */
 	background-color: rgba(212, 220, 212, 0.8);
 	padding: 0 2rem;
 }
@@ -226,6 +223,7 @@ a {
 .name {
 	font-size: 3rem;
 	margin-bottom: 0.5rem;
+	font-family: 'PT Serif', serif;
 }
 .softwareEngineer {
 	font-size: 2rem;
@@ -244,6 +242,7 @@ a {
 }
 .contactForm {
 	width: 60vw;
+	max-width: 600px;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-template-rows: auto;
@@ -255,6 +254,15 @@ a {
 	font-size: 1.5rem;
 
 }
+.input{
+	background-color: transparent;
+	box-shadow: 2px 2px 2px 2px var(--dark-green);
+	border-radius: 10px;
+	padding: .5rem;
+}
+.input:hover{
+	background-color: var(--dark-gray-green);
+}
 .row1col1 {
 	grid-row: 1;
 	grid-column: 1;
@@ -262,6 +270,8 @@ a {
 .row1col2 {
 	grid-row: 1;
 	grid-column: 2;
+	/* width: 90%; */
+
 }
 .row2col1 {
 	grid-row: 2;
@@ -283,6 +293,7 @@ a {
 .row4col2 {
 	grid-row: 4;
 	grid-column: 2;
+
 }
 
 .resumeContainer {

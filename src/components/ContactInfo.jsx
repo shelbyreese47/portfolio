@@ -39,13 +39,13 @@ function ContactInfo(props) {
         <div className="contactMe">
                 <h2>Contact Me</h2>
             <form className = "contactForm">
-                <label className="row1col1">Name</label>
-                <input onChange={handleChange} className="row1col2"></input>
-                <label className="row2col1">Email Address</label>
-                <input onChange={handleChange} className="row2col2"></input>
-                <label className="row3col1">Message</label>
-                <input onChange={handleChange} className="row3col2"></input>
-                <button className="row4col2" onClick={handleSubmit}>Send</button>
+                <label className="row1col1 label">Name</label>
+                <input onChange={handleChange} className="row1col2 input"></input>
+                <label className="row2col1 label">Email Address</label>
+                <input onChange={handleChange} className="row2col2 input"></input>
+                <label className="row3col1 label">Message</label>
+                <textarea onChange={handleChange} className="row3col2 input"></textarea>
+                <button className="row4col2 input" onClick={handleSubmit}>Send</button>
             </form>
         </div>
     );
